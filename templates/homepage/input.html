@@ -1,0 +1,41 @@
+<div id="searcharea" class="center d-flex flex-column mtb-30">
+  <p class="text-center font-size-30px cl-xam ">Lập kế hoạch tài chính cho tương lai </p>
+  <form id="form_index" class="col-md-6" method="post">
+    <div class="form-group cl-xam">
+      <label >Thu nhập mỗi tháng của bạn</label>
+      <input required id="income" type="number" class="form-control text-right" placeholder="triệu đồng" name="income" value="">
+    </div>
+    <div class="form-group cl-xam">
+      <label >Số tiền mục tiêu của bạn </label>
+      <input required id="goal" type="number" class="form-control text-right" placeholder="triệu đồng" name="goal" value="">
+    </div>
+    <div class="form-group cl-xam ">
+      <label>Bạn muốn đạt mục tiêu sau bao lâu</label>
+      <input required id="month" type="number" class="form-control text-right" placeholder="tháng" name="month" value="">
+    </div>
+    <div class="form-group cl-xam ">
+      <label>Số tiền bạn có thể tiết kiệm mỗi tháng</label>
+      <input required id="max" type="number" class="form-control text-right" placeholder="triệu đồng" name="max" value="">
+    </div>
+    <div class="form-group cl-xam">
+      <label>Ngân hàng bạn muốn gửi tiền</label>
+      <select id="bank" type="number" class="form-control text-right" name="bank" value="">
+        <option value="0.035">Agirbank</option>
+        <option value="0.03">Vietcombank</option>
+        <option value="0.04">BIDV</option>
+        <option value="0.055">TPbank</option>
+      </select>
+    </div>
+    <div id="show" class="">
+
+    </div>
+    {% if error == 1 %}
+    <font color="red" size="3">Nhập lỗi</font>
+    {% elif error == 2 %}
+    <font color="red" size="3">Không thể đạt được mục tiêu. Hãy điều chỉnh lại mục tiêu hoặc thời gian</font>
+    {% endif %}
+    <div class=" d-flex justify-content-end mt-20">
+      <button id="btn_xkq" form="form_index" class="btn bg-red text-white" type="submit">Xem kết quả</button>
+    </div>
+  </form>
+</div>
